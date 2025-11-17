@@ -11,8 +11,9 @@ const app = express();
 app.use(express.json());
 
 // === CORS (allow ONLY your frontend origin) ===
-const FRONTEND_ORIGIN = "https://event-management-system-zeta-blue.vercel.app";
-app.use(cors({ origin: FRONTEND_ORIGIN }));
+//const FRONTEND_ORIGIN = "https://event-management-system-zeta-blue.vercel.app";
+app.use(cors());
+
 
 // Basic rate limiting
 app.use(
@@ -80,5 +81,5 @@ app.get("/api/health", (_, res) => res.json({ ok: true }));
 const PORT = Number(process.env.PORT || 4000);
 app.listen(PORT, () => {
   console.log(`OTP server listening on port ${PORT}`);
-  console.log(`Accepting requests from FRONTEND_ORIGIN=${FRONTEND_ORIGIN}`);
+  //console.log(`Accepting requests from FRONTEND_ORIGIN=${FRONTEND_ORIGIN}`);
 });
