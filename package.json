@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-     "server": "nodemon server.js"
+     "server": "nodemon server.js",
+     "start" : "node server.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
