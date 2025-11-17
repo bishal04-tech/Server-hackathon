@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
+    "build": "echo \"no build for backend-only\"",
     "preview": "vite preview",
-     "server": "nodemon server.js",
-     "start" : "node server.js"
+    "server": "nodemon server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
