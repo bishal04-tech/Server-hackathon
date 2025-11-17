@@ -14,7 +14,6 @@ app.use(express.json());
 //const FRONTEND_ORIGIN = "https://event-management-system-zeta-blue.vercel.app";
 app.use(cors());
 
-
 // Basic rate limiting
 app.use(
   rateLimit({
@@ -76,7 +75,13 @@ app.post("/api/send-otp", async (req, res) => {
   }
 });
 
+// Health route
 app.get("/api/health", (_, res) => res.json({ ok: true }));
+
+// ✅ FIX: root route so it doesn’t say “Cannot GET /”
+app.get("/", (req, res) => {
+  res.send("OTP Server is running");
+});
 
 const PORT = Number(process.env.PORT || 4000);
 app.listen(PORT, () => {

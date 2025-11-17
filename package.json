@@ -38,6 +38,7 @@
     "lucide-react": "^0.546.0",
     "monaco-editor": "^0.54.0",
     "nodemailer": "^7.0.10",
+    "nodemon": "^3.1.11",
     "qrcode": "^1.5.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
